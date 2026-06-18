@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "https://smart-meter-reader-143169548601.us-east1.run.app/$1"
+    }
+  ]
+}
