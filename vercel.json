@@ -5,7 +5,7 @@
       "src": "/(.*)",
       "dest": "",
       "headers": {
-        "x-forwarded-host": ""
+        "x-forwarded-host": "https://smart-meter-reader-143169548601.us-east1.run.app"
       }
     }
   ]
