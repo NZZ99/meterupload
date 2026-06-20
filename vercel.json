@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "https://smart-meter-reader-143169548601.us-east1.run.app/$1",
+      "dest": "",
       "headers": {
         "x-forwarded-host": ""
       }
