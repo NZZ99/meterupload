@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>အသိပေးချက် - App အသုံးပြုနိုင်မည့်ရက်စွဲ</title>
+    <!-- Tailwind CSS အတွက် CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Padauk ဖောင့်နှင့် စတိုင်ကျသော Inter ဖောင့်) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Padauk', sans-serif;
+            background-color: #fafafa;
+        }
+        /* ချောမွေ့ပြီး ဆွဲဆောင်မှုရှိသော လွင့်မျောနေသည့် လှုပ်ရှားမှု */
+        @keyframes subtle-float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-12px) scale(1.03); }
+        }
+        .zap-animate {
+            animation: subtle-float 4s ease-in-out infinite;
+        }
+        /* လျှပ်စီးပတ်ပတ်လည် Glowing effect */
+        .glow-effect {
+            filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.6));
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 bg-slate-50 relative overflow-hidden">
+
+    <!-- နောက်ခံ အလှဆင် Gradient စက်ဝိုင်းများ (သန့်ရှင်းပြီး ခေတ်မီစေရန်) -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-60"></div>
+    <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-amber-100 rounded-full blur-3xl opacity-60"></div>
+
+    <!-- ပင်မ ကတ်ပြားဒီဇိုင်း (Premium White Card with Elegant Soft Shadow) -->
+    <div class="relative w-full max-w-md bg-white/80 backdrop-blur-md border border-slate-200/60 rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-100 text-center z-10">
+        
+        <!-- ထိပ်ဆုံးမှ လှုပ်ရှားနေပြီး တောက်ပနေသော Zap (Lightning Bolt) SVG Icon -->
+        <div class="zap-animate flex justify-center mb-6">
+            <svg class="w-36 h-36" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- အပြင်ဘက် တောက်ပနေသော စက်ဝိုင်းကွင်း -->
+                <circle cx="100" cy="100" r="80" fill="url(#circleGrad)" />
+                <circle cx="100" cy="100" r="65" fill="#ffffff" />
+                
+                <!-- အတွင်းပိုင်း Zap Icon (လျှပ်စီးပုံစံ) -->
+                <path class="glow-effect" d="M115 45L75 110H105L85 160L135 90H100L115 45Z" fill="url(#zapGrad)" />
+                
+                <!-- အလှဆင်အစက်အပြောက်ငယ်များ -->
+                <circle cx="50" cy="70" r="4" fill="#f59e0b" opacity="0.6"/>
+                <circle cx="155" cy="120" r="5" fill="#3b82f6" opacity="0.4"/>
+                <circle cx="145" cy="65" r="3" fill="#a78bfa" opacity="0.7"/>
+
+                <!-- Gradient သတ်မှတ်ချက်များ -->
+                <defs>
+                    <linearGradient id="circleGrad" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#eff6ff"/>
+                        <stop offset="1" stop-color="#fef3c7"/>
+                    </linearGradient>
+                    <linearGradient id="zapGrad" x1="85" y1="45" x2="135" y2="160" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#f59e0b"/>
+                        <stop offset="1" stop-color="#d97706"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- အက်ပ်အသုံးပြုခွင့် သတိပေးချက် Badge -->
+        <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 mb-6 border border-blue-100">
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            အက်ပ်အသုံးပြုခွင့် သတိပေးချက်
+        </span>
+
+        <!-- အသုံးပြုနိုင်မည့်ရက်စွဲ သတင်းစကား (ပိုမိုရှင်းလင်းပြီး တိုက်ရိုက်ကျသော စာသားဒီဇိုင်း) -->
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50/40 border border-blue-100 rounded-2xl p-6 text-center shadow-inner">
+            <p class="text-slate-700 text-base md:text-lg leading-relaxed font-semibold">
+                <span class="text-blue-600 font-extrabold underline decoration-2 decoration-blue-300">၁ ရက်နေ့မှ ၆ ရက်နေ့အတွင်းသာ</span> App အား အသုံးပြုလို့ရပါမည်။
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
